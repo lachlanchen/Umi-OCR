@@ -1,6 +1,9 @@
 [English](../README.md) · [العربية](README.ar.md) · [Español](README.es.md) · [Français](README.fr.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Tiếng Việt](README.vi.md) · [中文 (简体)](README.zh-Hans.md) · [中文（繁體）](README.zh-Hant.md) · [Deutsch](README.de.md) · [Русский](README.ru.md)
 
 
+[![LazyingArt banner](https://github.com/lachlanchen/lachlanchen/raw/main/figs/banner.png)](https://github.com/lachlanchen/lachlanchen/blob/main/figs/banner.png)
+
+
 <p align="center">
   <a href="https://github.com/hiroi-sora/Umi-OCR">
     <img width="200" height="128" src="https://tupian.li/images/2022/10/27/icon---256.png" alt="Umi-OCR">
@@ -16,7 +19,7 @@
   <a href="https://github.com/hiroi-sora/Umi-OCR/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/hiroi-sora/Umi-OCR?style=flat-square" alt="LICENSE">
   </a>
-  <a href="#download-releases">
+  <a href="#リリースのダウンロード">
     <img src="https://img.shields.io/github/downloads/hiroi-sora/Umi-OCR/total?style=flat-square" alt="downloads">
   </a>
   <a href="https://star-history.com/#hiroi-sora/Umi-OCR">
@@ -25,17 +28,25 @@
   <a href="https://github.com/hiroi-sora/Umi-OCR/forks">
     <img src="https://img.shields.io/github/forks/hiroi-sora/Umi-OCR?style=flat-square" alt="forks">
   </a>
+  <a href="https://github.com/hiroi-sora/Umi-OCR/issues">
+    <img src="https://img.shields.io/github/issues-raw/hiroi-sora/Umi-OCR?style=flat-square&color=d97706" alt="open issues">
+  </a>
+  <a href="https://github.com/hiroi-sora/Umi-OCR/pulls">
+    <img src="https://img.shields.io/github/issues-pr/hiroi-sora/Umi-OCR?style=flat-square&color=2ea44f" alt="open pull requests">
+  </a>
   <a href="https://hosted.weblate.org/engage/umi-ocr/">
     <img src="https://hosted.weblate.org/widget/umi-ocr/svg-badge.svg" alt="translation status">
   </a>
   <img src="https://img.shields.io/badge/Platform-Windows%207%2B%20%7C%20Linux%20x64-2ea44f?style=flat-square" alt="platform">
   <img src="https://img.shields.io/badge/OCR-Offline-1f6feb?style=flat-square" alt="offline OCR">
   <img src="https://img.shields.io/badge/Interface-GUI%20%7C%20CLI%20%7C%20HTTP-f97316?style=flat-square" alt="interfaces">
+  <img src="https://img.shields.io/github/last-commit/hiroi-sora/Umi-OCR?style=flat-square" alt="last commit">
+  <img src="https://img.shields.io/github/commit-activity/m/hiroi-sora/Umi-OCR?style=flat-square" alt="monthly commits">
 </p>
 
 <div align="center">
   <h3>
-    <a href="#table-of-contents">使い方</a>
+    <a href="#目次">使い方</a>
     <span> • </span>
     <a href="#download-releases">リリースのダウンロード</a>
     <span> • </span>
@@ -46,27 +57,47 @@
 </div>
 
 <div align="center">
-  <strong>無料・オープンソースのバッチ対応オフラインOCRソフトウェア</strong><br>
+  <strong>無料・オープンソースのバッチ対応オフライン OCR ソフトウェア</strong><br>
   <sub>Windows 7 x64 および Linux x64 に対応</sub>
 </div>
 
+## 🚀 一目でわかる
+
+| フォーカス | 詳細 |
+| --- | --- |
+| 📦 配布形態 | ポータブルのデスクトップアプリ (`.7z` および `.7z.exe`) |
+| 🧠 コアモード | スクリーンショット・文書・QR を含むオフライン一括 OCR |
+| 🧩 インターフェース | GUI、CLI、HTTP API |
+| 🌐 ローカリゼーション | Weblate を通じたコミュニティ翻訳 |
+
+---
+
 ## 概要
 
-Umi-OCR は、オフライン処理・高スループットなバッチワークフロー・実用的な連携機能に注力した、デスクトップファーストの OCR ツールです。
+Umi-OCR はデスクトップ中心の OCR ツールで、オフライン処理、高スループットの一括ワークフロー、実務で使いやすい統合を重視して設計されています。
 
-- **無料**: すべてのコードがオープンソースで、無償で利用できます。
-- **手軽**: 展開してそのまま実行でき、OCR の中核機能にネットワークは不要です。
-- **高効率**: 複数言語対応のオフライン OCR エンジンを同梱しています。
-- **柔軟**: GUI ワークフロー、コマンドライン制御、HTTP API を利用できます。
-- **多機能**: スクリーンショット OCR、バッチ OCR、文書 OCR、QR 読み取り/生成、数式認識の導線を提供します。
+- **無料**: 全てのコードはオープンソースで、自由に利用できます。
+- **使いやすい**: ローカルで抽出・実行し、コア OCR にネットワーク依存はありません。
+- **効率的**: マルチ言語対応のオフライン OCR エンジンを同梱。
+- **柔軟**: GUI ワークフロー、コマンドライン制御、HTTP API をサポート。
+- **機能豊富**: スクリーンショット OCR、バッチ OCR、文書 OCR、QR 読み取り・作成、数式認識のエントリーポイント。
 
 | ✅ クイック情報 | 詳細 |
 | --- | --- |
 | 🧩 ライセンス | MIT |
-| 🌐 ネットワーク要件 | OCR の主要ワークフローにネットワーク不要 |
-| 💻 対応環境 | Windows 7 x64+ / Linux x64 |
-| 🛠 利用モード | GUI, CLI, HTTP API |
+| 🌐 ネットワーク要件 | コア OCR ワークフローはネットワーク不要 |
+| 💻 対応プラットフォーム | Windows 7 x64+ / Linux x64 |
+| 🛠 利用モード | GUI、CLI、HTTP API |
 | 🌍 翻訳 | Weblate ベースのコミュニティローカライズ |
+
+### 実運用向けに設計
+
+| ワークフロー | 主な機能 |
+| --- | --- |
+| スクリーンショット処理 | 画面キャプチャから直接トリミングして文字起こし |
+| バッチ処理 | フォルダ一括処理、後処理調整、構造化テキストのエクスポート |
+| 文書 OCR | スキャン済み文書を OCR し、検索可能なレイヤード PDF を作成 |
+| QR 操作 | 複数コードのデコード、カスタム QR/バーコード生成 |
 
 <p align="center"><img src="https://tupian.li/images/2023/11/19/65599097ab5f4.png" alt="Umi-OCR preview 1" style="width: 80%;"></p>
 
@@ -74,22 +105,22 @@ Umi-OCR は、オフライン処理・高スループットなバッチワーク
 
 ## 目次
 
-- [機能](#機能)
-- [プロジェクト構成](#プロジェクト構成)
-- [前提条件](#前提条件)
-- [インストール](#インストール)
-- [リリースのダウンロード](#リリースのダウンロード)
-- [使い方](#使い方)
-- [設定](#設定)
-- [使用例](#使用例)
-- [API リファレンス](#api-リファレンス)
-- [開発メモ](#開発メモ)
-- [トラブルシューティング](#トラブルシューティング)
-- [ローカライズ](#ローカライズ)
-- [ロードマップ](#ロードマップ)
-- [コントリビューション](#コントリビューション)
-- [サポート](#サポート)
-- [ライセンス](#ライセンス)
+- [✨ 機能](#機能)
+- [🧱 プロジェクト構成](#プロジェクト構成)
+- [🧰 前提条件](#前提条件)
+- [⚙️ インストール](#インストール)
+- [⬇️ リリースのダウンロード](#リリースのダウンロード)
+- [🧪 使い方](#使い方)
+- [🔧 設定](#設定)
+- [🧩 サンプル](#サンプル)
+- [📡 API リファレンス](#api-リファレンス)
+- [🧠 開発メモ](#開発メモ)
+- [🛠️ トラブルシューティング](#トラブルシューティング)
+- [🌐 ローカリゼーション](#ローカリゼーション)
+- [🗺️ ロードマップ](#ロードマップ)
+- [🤝 貢献](#貢献)
+- [❤️ Support](#support)
+- [📜 ライセンス](#ライセンス)
 
 ## 機能
 
@@ -97,17 +128,17 @@ Umi-OCR は、オフライン処理・高スループットなバッチワーク
 
 <p align="center"><img src="https://tupian.li/images/2023/11/19/65599097aba8e.png" alt="Screenshot OCR" style="width: 80%;"></p>
 
-- Screenshot OCR タブを開いた後、スクリーンショット用ショートカットで OCR を実行できます。
-- 左パネルでは画像プレビュー上で直接テキスト選択できます。
-- 右パネルでは認識履歴の編集と複数レコードのコピーに対応しています。
-- クリップボードから貼り付けた画像にも対応しています。
+- スクリーンショット OCR タブを開いた後、ショートカットで OCR を開始。
+- 左側パネルで画像プレビュー内を直接テキスト選択。
+- 右側パネルで認識履歴を編集でき、複数レコードをまとめてコピー可能。
+- クリップボード貼り付け画像に対応。
 - 数式認識の参考: [Issue #254](https://github.com/hiroi-sora/Umi-OCR/issues/254)
 
 #### テキスト後処理（レイアウト解析）
 
 <p align="center"><img src="https://tupian.li/images/2023/11/19/6559909f3e378.png" alt="Text post-processing" style="width: 80%;"></p>
 
-OCR ブロックを並べ替えて読みやすさを高める、組み込みスキームを利用できます。
+OCR ブロックを再配置して可読性を向上させる組み込みスキーム:
 
 - `Multi-column - natural paragraphs`
 - `Multi-column - always line break`
@@ -115,10 +146,10 @@ OCR ブロックを並べ替えて読みやすさを高める、組み込みス�
 - `Single-column - natural paragraphs`
 - `Single-column - always line break`
 - `Single-column - no line break`
-- `Single-column - preserve indentation` (コードスニペットに有用)
-- `No post-processing` (生の OCR 出力)
+- `Single-column - preserve indentation`（コードスニペットで有効）
+- `No post-processing`（生 OCR 出力）
 
-選択した OCR エンジンモデルが対応していれば、これらのスキームは横書きと縦書き（右から左）レイアウトを処理できます。
+選択した OCR エンジンが対応していれば、横組み・縦組み（右から左）レイアウトの処理にも対応します。
 
 ### バッチ OCR
 
@@ -126,19 +157,19 @@ OCR ブロックを並べ替えて読みやすさを高める、組み込みス�
 
 - 入力形式: `jpg, jpe, jpeg, jfif, png, webp, bmp, tif, tiff`
 - 出力形式: `txt, jsonl, md, csv(Excel)`
-- スクリーンショット OCR のテキスト後処理ルールを利用できます。
-- UI ワークフローでは実用上のタスク件数上限はありません（1 回で数百枚の画像を処理可能）。
-- タスク完了後の自動シャットダウン/スリープに対応しています。
-- 超高解像度画像では `OCR settings -> image side limit` を調整してください。
+- スクリーンショット OCR のテキスト後処理ルールを再利用可能。
+- UI ワークフロー上に実質的な件数上限はなく、1 回あたり数百枚規模を想定。
+- タスク完了後に自動シャットダウン/スリープへ対応。
+- 超大きな画像は `OCR settings -> image side limit` を調整。
 
 #### 除外領域
 
 <p align="center"><img src="https://tupian.li/images/2023/11/19/6559911d28be7.png" alt="Ignore region editor" style="width: 80%;"></p>
 
-- バッチ OCR 中に固定の透かし/ロゴ文字列を除外できます。
-- 除外領域エディターでは、右クリックで複数の矩形を描画できます。
-- より堅牢にするため、対象透かしよりやや大きめの矩形を描画してください。
-- 除外はブロック単位です（領域内のテキストブロックは無視されます）。
+- バッチ OCR 時に、安定した透かし・ロゴ文字を除外。
+- 除外領域エディターで右クリックし、複数の矩形を描画。
+- 対象透かし領域より少し大きめに矩形を描くと安定します。
+- 除外はブロック単位（領域内のテキストブロックを無視）で行われます。
 
 <p align="center"><img src="https://tupian.li/images/2024/05/30/66587bf03ae15.png" alt="Ignore region scope example" style="width: 80%;"></p>
 
@@ -147,10 +178,10 @@ OCR ブロックを並べ替えて読みやすさを高める、組み込みス�
 <p align="center"><img src="https://github.com/hiroi-sora/Umi-OCR/assets/56373419/fc2266ee-b9b7-4079-8b10-6610e6da6cf5" alt="Document OCR" style="width: 80%;"></p>
 
 - 入力形式: `pdf, xps, epub, mobi, fb2, cbz`
-- 埋め込みテキストがある場合は抽出し、ない場合はスキャンページを OCR します。
-- 検索可能なレイヤー付き PDF を出力できます。
-- 除外領域（ヘッダー/フッター向け）に対応しています。
-- タスク完了後の自動シャットダウン/スリープに対応しています。
+- テキストが埋め込まれていれば抽出し、なければスキャンページを OCR。
+- 検索可能なレイヤード PDF をエクスポート。
+- ヘッダー/フッター用に除外領域をサポート。
+- タスク完了後に自動シャットダウン/スリープへ対応。
 
 ### QR コード
 
@@ -158,9 +189,9 @@ OCR ブロックを並べ替えて読みやすさを高める、組み込みス�
 
 読み取りモード:
 
-- スクリーンショット、貼り付け、ローカル画像のドラッグでデコードできます。
-- 1 枚の画像内にある複数コードの読み取りに対応しています。
-- 19 形式に対応:
+- スクリーンショット、貼り付け、ローカル画像のドラッグでデコード。
+- 1 画像内の複数コードをサポート。
+- 19 種類の形式に対応:
 
 `Aztec`,`Codabar`,`Code128`,`Code39`,`Code93`,`DataBar`,`DataBarExpanded`,`DataMatrix`,`EAN13`,`EAN8`,`ITF`,`LinearCodes`,`MatrixCodes`,`MaxiCode`,`MicroQRCode`,`PDF417`,`QRCode`,`UPCA`,`UPCE`
 
@@ -168,30 +199,30 @@ OCR ブロックを並べ替えて読みやすさを高める、組み込みス�
 
 生成モード:
 
-- テキストから QR/バーコード画像を生成できます。
-- 形式選択と誤り訂正設定に対応しています。
+- テキストから QR/バーコード画像を生成。
+- 形式選択や誤り訂正レベルの設定に対応。
 
 ### 全体設定
 
 <p align="center"><img src="https://tupian.li/images/2023/11/19/655991252e780.png" alt="Global settings" style="width: 80%;"></p>
 
-- ショートカット追加と起動動作の設定が可能です。
-- UI 言語を切り替えできます。
-- テーマ（ライト/ダーク）を切り替えできます。
-- フォントと UI スケーリングを設定できます。
-- OCR プラグインを切り替えできます。
-- GPU アクセラレーションでちらつきや UI ずれが起きる場合は `Interface and Appearance -> Renderer` でレンダラーを変更してください。
+- ショートカットの追加と起動時の挙動を設定。
+- UI 言語を切り替え。
+- テーマ切り替え（ライト / ダーク系）。
+- フォントや UI スケーリングを設定。
+- OCR プラグインを切り替え。
+- GPU アクセラレーションでチラつきや UI のずれが起きる場合、`Interface and Appearance -> Renderer` でレンダラーを切り替え。
 
 ## プロジェクト構成
 
-### リポジトリ関係
+### リポジトリ構成
 
 - [メインリポジトリ](https://github.com/hiroi-sora/Umi-OCR)
 - [プラグインリポジトリ](https://github.com/hiroi-sora/Umi-OCR_plugins)
 - [Windows ランタイムリポジトリ](https://github.com/hiroi-sora/Umi-OCR_runtime_windows)
 - [Linux ランタイムリポジトリ](https://github.com/hiroi-sora/Umi-OCR_runtime_linux)
 
-### ランタイム構成（公式アップストリーム構成）
+### ランタイムレイアウト（上流の標準レイアウト）
 
 `**` はこのメインリポジトリに含まれる内容を示します。
 
@@ -212,7 +243,7 @@ Umi-OCR
       └─ translation files
 ```
 
-### このリポジトリスナップショット内のソースツリー
+### このリポジトリスナップショットのソースツリー
 
 ```text
 .
@@ -252,30 +283,30 @@ Umi-OCR
 | --- | --- |
 | OS | Windows 7 x64+ または Linux x64 |
 | CPU（推奨） | AVX 対応 x64 CPU（PaddleOCR ベースのプラグイン向け） |
-| ランタイム（Windows 推奨） | 互換性向上のため Visual C++ ランタイム |
+| ランタイム（Windows 推奨） | Visual C++ ランタイム（互換性のため） |
 
 ### 開発者
 
-- 次のランタイムセットアップ手順を読み、従ってください:
+- 次を参照してプラットフォーム向けランタイム設定を実施:
   - [Umi-OCR_runtime_windows](https://github.com/hiroi-sora/Umi-OCR_runtime_windows)
   - [Umi-OCR_runtime_linux](https://github.com/hiroi-sora/Umi-OCR_runtime_linux)
-- このリポジトリには、`pip` で直接セットアップするための独立した `requirements.txt` や `pyproject.toml` は用意されていません。
+- このリポジトリには、pip ベースのセットアップに対応した `requirements.txt` や `pyproject.toml` は含まれていません。
 
 ## インストール
 
-### オプション A: ポータブルリリースパッケージ（推奨）
+### 方法 A: ポータブル版（推奨）
 
-1. `.7z` または自己解凍形式 `.7z.exe` パッケージをダウンロードします。
-2. ファイルを展開します。
-3. `Umi-OCR.exe` を起動します。
+1. `.7z` または自己解凍型 `.7z.exe` パッケージをダウンロード。
+2. ファイルを展開。
+3. `Umi-OCR.exe` を起動。
 
-### オプション B: Scoop（Windows）
+### 方法 B: Scoop（Windows）
 
 ```bash
 scoop bucket add extras
 ```
 
-RapidOCR 版（互換性重視）:
+RapidOCR 版（互換性優先）:
 
 ```bash
 scoop install extras/umi-ocr
@@ -287,50 +318,50 @@ PaddleOCR 版（やや高速）:
 scoop install extras/umi-ocr-paddle
 ```
 
-両バリアントを同時にインストールしないでください（ショートカット競合の可能性があります）。必要に応じてプラグイン切り替えを利用してください。
+2 つの版を同時にインストールしないでください（ショートカットの競合が起きる可能性があります）。必要ならプラグイン切り替えを使ってください。
 
-### オプション C: ランタイムリポジトリ経由でビルド/実行
+### 方法 C: ランタイムリポジトリ経由のビルド/実行
 
-次のビルド/ランタイム初期化手順に従ってください:
+ビルドとランタイム起動の手順は以下を参照。
 
-- [Windows ランタイムセットアップ](https://github.com/hiroi-sora/Umi-OCR_runtime_windows)
-- [Linux ランタイムセットアップ](https://github.com/hiroi-sora/Umi-OCR_runtime_linux)
+- [Windows runtime setup](https://github.com/hiroi-sora/Umi-OCR_runtime_windows)
+- [Linux runtime setup](https://github.com/hiroi-sora/Umi-OCR_runtime_linux)
 
 ## リリースのダウンロード
 
-| ミラー | リンク | 備考 |
+| ミラー | リンク | 補足 |
 | --- | --- | --- |
-| Lanzou | https://hiroi-sora.lanzoul.com/s/umi-ocr | 地域向けミラー |
-| GitHub | https://github.com/hiroi-sora/Umi-OCR/releases/latest | 主要アップストリーム配布ページ |
-| SourceForge | https://sourceforge.net/projects/umi-ocr | 代替ダウンロードミラー |
+| Lanzou | [地域ミラー](https://hiroi-sora.lanzoul.com/s/umi-ocr) | 中国向けミラー |
+| GitHub | [最新版](https://github.com/hiroi-sora/Umi-OCR/releases/latest) | upstream の主要リリースページ |
+| SourceForge | [ダウンロードミラー](https://sourceforge.net/projects/umi-ocr) | レガシーな代替チャネル |
 
 ## 使い方
 
 ### はじめに
 
-- Umi-OCR はポータブルで、インストーラーは不要です。
-- 展開後に `Umi-OCR.exe` を起動してください。
-- 起動に失敗する場合は [トラブルシューティング](#トラブルシューティング) を参照してください。
+- Umi-OCR はポータブルで、インストーラー不要。
+- 展開後に `Umi-OCR.exe` を起動。
+- 起動に失敗した場合は [トラブルシューティング](#トラブルシューティング) を確認。
 
 ### インターフェース言語
 
-初回起動時、UI 言語はシステムロケールに基づいて自動選択されます。
+初回起動時、UI 言語はシステムロケールに従って自動選択されます。
 
-手動切り替え: `Global Settings -> Language`。
+手動変更: `Global Settings -> Language`
 
 <p align="center"><img src="https://tupian.li/images/2023/11/19/65599c3f9e600.png" alt="Language switch" style="width: 80%;"></p>
 
 ### タブとワークフロー
 
-- ワークフローに必要なタブだけを開いてください。
-- タブバー左上から最前面表示を切り替えできます。
-- 誤って閉じるのを防ぐため、右上からタブをロックできます。
+- 必要なタブのみを開く。
+- タブバー左上で常時最前面を切り替え。
+- 右上で固定して誤って閉じないようにする。
 
-### コマンドライン利用
+### CLI の使い方
 
 CLI マニュアル: [docs/README_CLI.md](docs/README_CLI.md)
 
-基本操作:
+基本コマンド:
 
 ```bash
 umi-ocr --help
@@ -348,7 +379,7 @@ umi-ocr --clipboard
 umi-ocr --path "D:/img1.png" "D:/img2.png" "D:/image/test"
 ```
 
-固定領域でスクリーンショット:
+固定領域のスクリーンショット:
 
 ```bash
 umi-ocr --screenshot screen=1 rect=50,100,300,200
@@ -371,56 +402,56 @@ umi-ocr --screenshot --output_append result.txt
 umi-ocr --screenshot "-->>" result.txt
 ```
 
-### HTTP API 利用
+### HTTP API の使い方
 
 HTTP ドキュメント: [docs/http/README.md](docs/http/README.md)
 
-主なエンドポイント:
+主要エンドポイント:
 
 | エンドポイント | 用途 |
 | --- | --- |
 | `/api/ocr/get_options` | OCR オプション |
 | `/api/ocr` | OCR 実行 |
-| `/api/doc/*` | 文書オプション/アップロード/結果/ダウンロード |
+| `/api/doc/*` | 文書のオプション / アップロード / 結果 / ダウンロード |
 | `/api/qrcode` | QR デコード |
-| `/argv` | HTTP 経由 CLI ブリッジ |
+| `/argv` | HTTP 経由の CLI ブリッジ |
 
-注: `Global Settings` で HTTP サービスを有効のままにしておく必要があります（既定値は有効）。LAN アクセスが必要な場合を除き、ローカル専用ホストを使用してください。
+注記: `Global Settings` では HTTP サービスを有効（既定）にしておく必要があります。LAN 接続が必要な場合のみローカル以外のホスト許可を行ってください。
 
 ## 設定
 
 - ランタイム設定は `UmiOCR-data/.settings`（INI 形式）に保存されます。
-- 設定を手動編集した後は、次で反映してください:
+- 設定を手動で編集した後は、以下で反映します。
 
 ```bash
 umi-ocr --reload
 ```
 
-- 起動/実行時の互換状態には、次も関係する場合があります:
+- 起動/実行時の互換性状態は以下を含む場合があります。
   - `UmiOCR-data/.pre_settings`
-  - `UmiOCR-data/logs/`（ランタイムログ対応版の場合）
+  - `UmiOCR-data/logs/`（ランタイムログ付きのバージョン）
 
-## 使用例
+## サンプル
 
-### 例1: パス指定でバッチ OCR
+### 例 1: パス指定でバッチ OCR
 
 ```bash
 umi-ocr --path "D:/book_pages" --output "D:/ocr_output.txt"
 ```
 
-### 例2: 複数パスから QR を読み取り
+### 例 2: 複数パスの QR 読み取り
 
 ```bash
 umi-ocr --qrcode_read "D:/qr/1.png" "D:/qr/2.png"
 ```
 
-### 例3: サイズ指定で QR を生成
+### 例 3: 明示的なサイズで QR を生成
 
 ```bash
 umi-ocr --qrcode_create "https://github.com/hiroi-sora/Umi-OCR" "D:/qr_out.jpeg" 128 256
 ```
 
-### 例4: 高度なモジュール呼び出し
+### 例 4: 高度なモジュール呼び出し
 
 ```bash
 umi-ocr --all_modules
@@ -429,89 +460,89 @@ umi-ocr --call_qml QRCode --func scanPaths '["D:/Pictures/Screenshots/test/二�
 
 ## API リファレンス
 
-- コマンドラインマニュアル: [docs/README_CLI.md](docs/README_CLI.md)
+- CLI マニュアル: [docs/README_CLI.md](docs/README_CLI.md)
 - HTTP API マニュアル: [docs/http/README.md](docs/http/README.md)
 - OCR API: [docs/http/api_ocr.md](docs/http/api_ocr.md)
-- 文書 API: [docs/http/api_doc.md](docs/http/api_doc.md)
+- Document API: [docs/http/api_doc.md](docs/http/api_doc.md)
 - QR API: [docs/http/api_qrcode.md](docs/http/api_qrcode.md)
 - HTTP argv ブリッジ: [docs/http/argv.md](docs/http/argv.md)
 
 ## 開発メモ
 
-- エントリーポイント:
-  - `UmiOCR-data/main.py`（ランタイム起動）
-  - `UmiOCR-data/py_src/run.py`（アプリケーション起動）
-- UI スタック: PySide2 + QML（`UmiOCR-data/qt_res/qml`）。
+- エントリポイント:
+  - `UmiOCR-data/main.py`（ランタイムブートストラップ）
+  - `UmiOCR-data/py_src/run.py`（アプリ起動）
+- UI スタック: PySide2 + QML (`UmiOCR-data/qt_res/qml`).
 - コアサービス:
-  - HTTP + コマンド転送は `py_src/server/*`
-  - キュー実行の OCR/Doc/QR タスクは `py_src/mission/*`
-  - OCR 後処理と出力は `py_src/ocr/*`
-- エコシステムで対応する OCR エンジン:
+  - `py_src/server/*`（HTTP + コマンド転送）
+  - `py_src/mission/*`（OCR / 文書 / QR タスクのキュー処理）
+  - `py_src/ocr/*`（OCR 後処理と出力）
+- 対応 OCR エンジン:
   - [PaddleOCR-json](https://github.com/hiroi-sora/PaddleOCR-json)
   - [RapidOCR-json](https://github.com/hiroi-sora/RapidOCR-json)
-- ランタイムフレームワーク: [PyStand (customized)](https://github.com/skywind3000/PyStand)
+- ランタイム基盤: [PyStand (customized)](https://github.com/skywind3000/PyStand)
 
 ## トラブルシューティング
 
-トラブルシューティングの完全版: https://github.com/hiroi-sora/Umi-OCR/issues/447
+詳細は以下を参照: [https://github.com/hiroi-sora/Umi-OCR/issues/447](https://github.com/hiroi-sora/Umi-OCR/issues/447)
 
-クイック索引:
+クイックインデックス:
 
 | 症状 | ジャンプ |
 | --- | --- |
 | `Py_Main()` が見つからない | [`Cannot find Py_Main()`](#cannot-find-py_main) |
-| OpenGL コンテキスト作成に失敗 | [`Failed to create OpenGL context`](#failed-to-create-opengl-context) |
-| 起動時にアプリがクラッシュする | [`Umi-OCR.exe has stopped working`](#umi-ocrexe-has-stopped-working) |
-| `0xc0000142` / OCR 初期化失敗 | [`0xc0000142` or OCR init failure with MKLDNN/AVX hints](#0xc0000142-or-ocr-init-failure-with-mkldnnavx-hints) |
-| `api-ms-win-crt-runtime-l1-1-0.dll` が不足 | [`Missing api-ms-win-crt-runtime-l1-1-0dll`](#missing-api-ms-win-crt-runtime-l1-1-0dll) |
+| OpenGL コンテキストの作成に失敗 | [`Failed to create OpenGL context`](#failed-to-create-opengl-context) |
+| 起動時にクラッシュする | [`Umi-OCR.exe has stopped working`](#umi-ocrexe-has-stopped-working) |
+| `0xc0000142` / OCR 初期化失敗（MKLDNN/AVX の示唆） | [`0xc0000142` or OCR init failure with MKLDNN/AVX hints](#0xc0000142-or-ocr-init-failure-with-mkldnnavx-hints) |
+| `api-ms-win-crt-runtime-l1-1-0.dll` が見つからない | [`Missing api-ms-win-crt-runtime-l1-1-0.dll`](#missing-api-ms-win-crt-runtime-l1-1-0dll) |
 
 ### `Cannot find Py_Main()`
 
 - VC ランタイムをインストール: https://aka.ms/vs/17/release/vc_redist.x64.exe
-- またはフォールバック `UmiOCR-data/RUN_GUI.bat` で起動してください。
-- 注: `.bat` ランチャーには制限があります（CLI 制御不可、ショートカット自動化が限定的）。
+- または代替として `UmiOCR-data/RUN_GUI.bat` で起動。
+- 注意: `.bat` ランチャーには CLI 制御がなく、ショートカット自動化も制限があります。
 
 ### `Failed to create OpenGL context`
 
 - ランタイムパッチをダウンロード: https://github.com/hiroi-sora/Umi-OCR_v2/files/13167436/opengl32sw_64.zip
-- 展開した DLL を `UmiOCR-data/site-packages/PySide2/` に配置します。
+- 展開した DLL を `UmiOCR-data/site-packages/PySide2/` に配置。
 
 ### `Umi-OCR.exe has stopped working`
 
-- 異なる Windows バージョン間で設定を流用した場合によく発生します。
-- `UmiOCR-data/.pre_settings` を削除して再試行してください。
+- 異なる Windows バージョン間で設定を再利用したときに発生しやすいです。
+- `UmiOCR-data/.pre_settings` を削除して再試行。
 
 ### `0xc0000142` or OCR init failure with MKLDNN/AVX hints
 
-- CPU が AVX 非対応の可能性があります。
-- RapidOCR 版を使うか、PaddleOCR プラグイン以外へ切り替えてください:
+- CPU が AVX に非対応の可能性があります。
+- RapidOCR 版を使うか、PaddleOCR プラグインを切り替えてください。
   - [Umi-OCR_Rapid releases](https://github.com/hiroi-sora/Umi-OCR/releases)
   - [Umi-OCR plugins](https://github.com/hiroi-sora/Umi-OCR_plugins/releases)
 
-### `OSError` を伴う黒いコンソール（プログラムが見つからない）
+### Black console with `OSError` (program not found)
 
-- 更新未適用の初期 Windows 7 で起きやすい問題です（特に `KB2533623` 不足）。
-- 推奨対応: Windows Update を完全実行し、再起動してください。
+- 旧式の未パッチ Windows 7（特に `KB2533623` が未適用）でよく発生します。
+- 推奨対応: Windows Update を実行し、再起動。
 
-### 検索可能 PDF のエクスポート中にクラッシュする
+### Crash while exporting searchable PDF
 
-- Windows 7 の更新不足（特に `KB4534310` および依存更新）が原因のことが多いです。
-- 推奨対応: Windows Update で不足している更新をすべて適用してください。
+- Windows 7 更新不足（特に `KB4534310` と依存更新）が原因で起きやすいです。
+- 推奨対応: Windows Update で不足している更新をすべて適用。
 
-### `api-ms-win-crt-runtime-l1-1-0.dll` が不足
+### Missing `api-ms-win-crt-runtime-l1-1-0.dll`
 
 - VC ランタイムをインストール: https://aka.ms/vs/17/release/vc_redist.x64.exe
 
-### ショートカットを手動配置する
+### Manual Shortcut Placement
 
-ショートカット自動作成に失敗する場合は、手動で配置してください:
+自動ショートカット作成が失敗した場合は手動で配置してください。
 
 - スタートメニュー: `C:\ProgramData\Microsoft\Windows\Start Menu`
 - スタートアップ: `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup`
 
-## ローカライズ
+## ローカリゼーション
 
-このプロジェクトは Weblate を使って共同ローカライズを行っています:
+このプロジェクトは Weblate を使った共同ローカリゼーションを採用しています。
 
 - [Weblate: Umi-OCR](https://hosted.weblate.org/engage/umi-ocr/)
 
@@ -520,34 +551,34 @@ umi-ocr --call_qml QRCode --func scanPaths '["D:/Pictures/Screenshots/test/二�
 | 言語 | ファイル |
 | --- | --- |
 
-翻訳者の皆さまに感謝します:
+翻訳の貢献ありがとうございます:
 
-| 翻訳者 | 貢献言語 |
+| 翻訳者 | 寄稿言語 |
 | --- | --- |
 | [杨鹏](https://hosted.weblate.org/user/ypf) | Português |
 | [தமிழ்நேரம்](https://hosted.weblate.org/user/TamilNeram/) | தமிழ் |
 
-誤りや抜けがあれば、[このディスカッション](https://github.com/hiroi-sora/Umi-OCR/discussions/449) に返信してください。
+誤りや抜けがある場合は、[こちらのディスカッション](https://github.com/hiroi-sora/Umi-OCR/discussions/449)に返信してください。
 
 ## ロードマップ
 
-### 完了済み
+### 完了
 
-- タブページ構成。
+- タブページアーキテクチャ。
 - OCR API コントローラー。
-- OCR ミッション/タスクコントローラー。
-- ライト/ダーク対応テーママネージャー。
+- OCR ミッション / タスクコントローラー。
+- ライト / ダーク対応のテーママネージャー。
 - バッチ OCR。
 - スクリーンショット OCR。
 - ホットキー機構。
 - システムトレイメニュー。
 - テキストブロック後処理（レイアウト最適化）。
-- エンジンメモリクリーンアップ。
+- エンジンのメモリクリア。
 - 多言語 UI。
 - コマンドラインモード。
-- Windows 7 互換性。
-- Excel（CSV）出力形式。
-- スクリーンショット時の `Esc` 中断。
+- Windows 7 互換。
+- Excel（CSV）出力フォーマット。
+- `Esc` キーでスクリーンショット中断。
 - 外部テーマファイル。
 - フォント切り替え。
 - ローディングアニメーション。
@@ -555,54 +586,46 @@ umi-ocr --call_qml QRCode --func scanPaths '["D:/Pictures/Screenshots/test/二�
 - QR コード認識。
 - バッチ認識での画像プレビュー。
 - PDF 認識。
-- ローカル画像ビューアーで画像を開く。[#335](https://github.com/hiroi-sora/Umi-OCR/issues/335)
-- 直前のスクリーンショット領域を再利用。[#357](https://github.com/hiroi-sora/Umi-OCR/issues/357)
+- ローカル画像ビューアで画像を開く。 [#335](https://github.com/hiroi-sora/Umi-OCR/issues/335)
+- 前回のスクリーンショット領域を再利用。 [#357](https://github.com/hiroi-sora/Umi-OCR/issues/357)
 - 文書認識における Windows 7 互換性問題を修正。
-- HTTP/CLI インターフェースでの QR 読み取り/生成対応。(#423)
+- HTTP と CLI インターフェースでの QR 読み取り/作成サポート。 (#423)
 - QR インターフェース文書。
-- Linux プラットフォーム移行。
+- Linux への移植。
 - HTTP 文書認識 API。
 
 ### 長期計画
 
-以下は構想段階の項目であり、開発中に変更される可能性があります:
+以下の項目は予定案であり、開発中に変更される可能性があります。
 
-- [ ] 基盤プラグイン機構のリファクタリング。
+- [ ] 基盤となるプラグイン機構のリファクタリング。
 - [ ] オンライン OCR API プラグイン。
 - [ ] 独立した数式認識プラグイン。
-- [ ] LaTeX レンダリング対応の数式専用タブ。
-- [ ] 更新チェック機構。
+- [ ] LaTeX レンダリング付きの専用数式タブ。
+- [ ] 更新チェック機能。
 - [ ] レイアウト解析以外の追加後処理モジュール。
-- [ ] 主要インターフェース機能向けイベントトリガー。
+- [ ] キーユーザーインターフェース機能向けイベントトリガー。
 - [ ] GPU ベースのオフライン OCR。
 - [ ] 画像翻訳。
 - [ ] オフライン翻訳。
 - [ ] 固定領域 OCR。
-- [ ] 表認識から Excel 出力。
+- [ ] テーブル認識の Excel 出力。
 - [ ] 履歴システム。
-- [ ] macOS/Ubuntu などへの対応拡張。
+- [ ] macOS / Ubuntu など他プラットフォームへの互換拡張。
 
-## コントリビューション
+## 貢献
 
-コントリビューションを歓迎します。
+コントリビューションは歓迎します。
 
 - バグ報告や機能要望は [Issues](https://github.com/hiroi-sora/Umi-OCR/issues) へ。
-- アイデアの議論は [Discussions](https://github.com/hiroi-sora/Umi-OCR/discussions) へ。
-- 翻訳への参加は [Weblate](https://hosted.weblate.org/engage/umi-ocr/) へ。
-- エンジン/プラグイン関連は [Umi-OCR_plugins](https://github.com/hiroi-sora/Umi-OCR_plugins) も参照してください。
+- アイデアは [Discussions](https://github.com/hiroi-sora/Umi-OCR/discussions) で議論。
+- 翻訳は [Weblate](https://hosted.weblate.org/engage/umi-ocr/) に参加。
+- エンジン／プラグイン関連については [Umi-OCR_plugins](https://github.com/hiroi-sora/Umi-OCR_plugins) も参照。
 
-開発環境のセットアップは、以下のランタイムリポジトリ手順に従ってください:
+開発環境のセットアップについては、プラットフォーム別のランタイムリポジトリを参照してください。
 
 - [Umi-OCR_runtime_windows](https://github.com/hiroi-sora/Umi-OCR_runtime_windows)
 - [Umi-OCR_runtime_linux](https://github.com/hiroi-sora/Umi-OCR_runtime_linux)
-
-## サポート
-
-Umi-OCR は主に [hiroi-sora](https://github.com/hiroi-sora) が空き時間に開発・保守しています。
-
-このプロジェクトが役立った場合、スポンサー支援をご検討いただけると助かります:
-
-- Afdian (CN): https://afdian.com/a/hiroi-sora
 
 ## Star History
 
@@ -614,6 +637,13 @@ Umi-OCR は主に [hiroi-sora](https://github.com/hiroi-sora) が空き時間に
 
 ## ライセンス
 
-このプロジェクトは MIT License の下で提供されています。
+このプロジェクトは MIT ライセンスの下で公開されています。
 
 - [LICENSE](LICENSE)
+
+
+## ❤️ Support
+
+| Donate | PayPal | Stripe |
+| --- | --- | --- |
+| [![Donate](https://camo.githubusercontent.com/24a4914f0b42c6f435f9e101621f1e52535b02c225764b2f6cc99416926004b7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d4c617a79696e674172742d3045413545393f7374796c653d666f722d7468652d6261646765266c6f676f3d6b6f2d6669266c6f676f436f6c6f723d7768697465)](https://chat.lazying.art/donate) | [![PayPal](https://camo.githubusercontent.com/d0f57e8b016517a4b06961b24d0ca87d62fdba16e18bbdb6aba28e978dc0ea21/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f50617950616c2d526f6e677a686f754368656e2d3030343537433f7374796c653d666f722d7468652d6261646765266c6f676f3d70617970616c266c6f676f436f6c6f723d7768697465)](https://paypal.me/RongzhouChen) | [![Stripe](https://camo.githubusercontent.com/1152dfe04b6943afe3a8d2953676749603fb9f95e24088c92c97a01a897b4942/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5374726970652d446f6e6174652d3633354246463f7374796c653d666f722d7468652d6261646765266c6f676f3d737472697065266c6f676f436f6c6f723d7768697465)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |

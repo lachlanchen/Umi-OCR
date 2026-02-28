@@ -1,6 +1,10 @@
 [English](../README.md) · [العربية](README.ar.md) · [Español](README.es.md) · [Français](README.fr.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Tiếng Việt](README.vi.md) · [中文 (简体)](README.zh-Hans.md) · [中文（繁體）](README.zh-Hant.md) · [Deutsch](README.de.md) · [Русский](README.ru.md)
 
 
+
+[![LazyingArt banner](https://github.com/lachlanchen/lachlanchen/raw/main/figs/banner.png)](https://github.com/lachlanchen/lachlanchen/blob/main/figs/banner.png)
+
+
 <p align="center">
   <a href="https://github.com/hiroi-sora/Umi-OCR">
     <img width="200" height="128" src="https://tupian.li/images/2022/10/27/icon---256.png" alt="Umi-OCR">
@@ -25,12 +29,20 @@
   <a href="https://github.com/hiroi-sora/Umi-OCR/forks">
     <img src="https://img.shields.io/github/forks/hiroi-sora/Umi-OCR?style=flat-square" alt="forks">
   </a>
+  <a href="https://github.com/hiroi-sora/Umi-OCR/issues">
+    <img src="https://img.shields.io/github/issues-raw/hiroi-sora/Umi-OCR?style=flat-square&color=d97706" alt="open issues">
+  </a>
+  <a href="https://github.com/hiroi-sora/Umi-OCR/pulls">
+    <img src="https://img.shields.io/github/issues-pr/hiroi-sora/Umi-OCR?style=flat-square&color=2ea44f" alt="open pull requests">
+  </a>
   <a href="https://hosted.weblate.org/engage/umi-ocr/">
     <img src="https://hosted.weblate.org/widget/umi-ocr/svg-badge.svg" alt="translation status">
   </a>
   <img src="https://img.shields.io/badge/Platform-Windows%207%2B%20%7C%20Linux%20x64-2ea44f?style=flat-square" alt="platform">
   <img src="https://img.shields.io/badge/OCR-Offline-1f6feb?style=flat-square" alt="offline OCR">
   <img src="https://img.shields.io/badge/Interface-GUI%20%7C%20CLI%20%7C%20HTTP-f97316?style=flat-square" alt="interfaces">
+  <img src="https://img.shields.io/github/last-commit/hiroi-sora/Umi-OCR?style=flat-square" alt="last commit">
+  <img src="https://img.shields.io/github/commit-activity/m/hiroi-sora/Umi-OCR?style=flat-square" alt="monthly commits">
 </p>
 
 <div align="center">
@@ -60,13 +72,22 @@ Umi-OCR ist ein OCR-Tool mit Desktop-Fokus, das auf Offline-Verarbeitung, Batch-
 - **Flexibel**: Unterstützt GUI-Workflows, Kommandozeilensteuerung und HTTP-APIs.
 - **Funktionsreich**: Screenshot-OCR, Batch-OCR, Dokument-OCR, QR-Code lesen/erzeugen, Einstiegspunkt für Formel-Erkennung.
 
-| ✅ Quick Facts | Details |
+| ✅ Kurzfakten | Details |
 | --- | --- |
-| 🧩 License | MIT |
-| 🌐 Network Requirement | Kein Netzwerk für zentrale OCR-Workflows erforderlich |
-| 💻 Platform | Windows 7 x64+ / Linux x64 |
-| 🛠 Usage Modes | GUI, CLI, HTTP API |
-| 🌍 Translation | Community-Lokalisierung über Weblate |
+| 🧩 Lizenz | MIT |
+| 🌐 Netzwerk-Anforderung | Kein Netzwerk für zentrale OCR-Workflows erforderlich |
+| 💻 Plattform | Windows 7 x64+ / Linux x64 |
+| 🛠 Nutzungsmodi | GUI, CLI, HTTP API |
+| 🌍 Übersetzung | Community-Lokalisierung über Weblate |
+
+### Für praktische Workflows gemacht
+
+| Workflow | Kern-Funktion |
+| --- | --- |
+| Screenshot-Verarbeitung | Zuschneiden, auswählen und direkt aus Live-Aufnahmen transkribieren |
+| Batch-Verarbeitung | Ordner stapelweise verarbeiten, Nachbearbeitung anpassen und strukturierte Textergebnisse exportieren |
+| Dokumenten-OCR | Gescannte Dokumente OCR-en und durchsuchbare PDFs mit Ebenen erzeugen |
+| QR-Vorgänge | Mehrere Codes decodieren und individuelle QR-/Barcode-Dateien erstellen |
 
 <p align="center"><img src="https://tupian.li/images/2023/11/19/65599097ab5f4.png" alt="Umi-OCR preview 1" style="width: 80%;"></p>
 
@@ -596,14 +617,6 @@ Für das Entwicklungs-Setup den Plattform-Runtime-Repositories folgen:
 - [Umi-OCR_runtime_windows](https://github.com/hiroi-sora/Umi-OCR_runtime_windows)
 - [Umi-OCR_runtime_linux](https://github.com/hiroi-sora/Umi-OCR_runtime_linux)
 
-## Support
-
-Umi-OCR wird überwiegend in der Freizeit von [hiroi-sora](https://github.com/hiroi-sora) entwickelt und gepflegt.
-
-Wenn dir dieses Projekt hilft, ist Unterstützung willkommen:
-
-- Afdian (CN): https://afdian.com/a/hiroi-sora
-
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=hiroi-sora/Umi-OCR&type=Date)](https://star-history.com/#hiroi-sora/Umi-OCR&Date)
@@ -611,6 +624,12 @@ Wenn dir dieses Projekt hilft, ist Unterstützung willkommen:
 ## CHANGE LOG
 
 - [CHANGE_LOG.md](CHANGE_LOG.md)
+
+## ❤️ Support
+
+| Donate | PayPal | Stripe |
+| --- | --- | --- |
+| [![Donate](https://camo.githubusercontent.com/24a4914f0b42c6f435f9e101621f1e52535b02c225764b2f6cc99416926004b7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d4c617a79696e674172742d3045413545393f7374796c653d666f722d7468652d6261646765266c6f676f3d6b6f2d6669266c6f676f436f6c6f723d7768697465)](https://chat.lazying.art/donate) | [![PayPal](https://camo.githubusercontent.com/d0f57e8b016517a4b06961b24d0ca87d62fdba16e18bbdb6aba28e978dc0ea21/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f50617950616c2d526f6e677a686f754368656e2d3030343537433f7374796c653d666f722d7468652d6261646765266c6f676f3d70617970616c266c6f676f436f6c6f723d7768697465)](https://paypal.me/RongzhouChen) | [![Stripe](https://camo.githubusercontent.com/1152dfe04b6943afe3a8d2953676749603fb9f95e24088c92c97a01a897b4942/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5374726970652d446f6e6174652d3633354246463f7374796c653d666f722d7468652d6261646765266c6f676f3d737472697065266c6f676f436f6c6f723d7768697465)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |
 
 ## License
 
