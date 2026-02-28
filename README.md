@@ -1,16 +1,5 @@
-<p align="left">
-    <span>
-        <b>中文</b>
-    </span>
-    <span> • </span>
-    <a href="README_en.md">
-        English
-    </a>
-    <span> • </span>
-    <a href="README_ja.md">
-        日本語
-    </a>
-</p>
+[English](README.md) · [العربية](i18n/README.ar.md) · [Español](i18n/README.es.md) · [Français](i18n/README.fr.md) · [日本語](i18n/README.ja.md) · [한국어](i18n/README.ko.md) · [Tiếng Việt](i18n/README.vi.md) · [中文 (简体)](i18n/README.zh-Hans.md) · [中文（繁體）](i18n/README.zh-Hant.md) · [Deutsch](i18n/README.de.md) · [Русский](i18n/README.ru.md)
+
 
 <p align="center">
   <a href="https://github.com/hiroi-sora/Umi-OCR">
@@ -18,7 +7,7 @@
   </a>
 </p>
 
-<h1 align="center">Umi-OCR 文字识别工具</h1>
+<h1 align="center">Umi-OCR</h1>
 
 <p align="center">
   <a href="https://github.com/hiroi-sora/Umi-OCR/releases/latest">
@@ -27,8 +16,8 @@
   <a href="https://github.com/hiroi-sora/Umi-OCR/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/hiroi-sora/Umi-OCR?style=flat-square" alt="LICENSE">
   </a>
-  <a href="#下载发行版">
-    <img src="https://img.shields.io/github/downloads/hiroi-sora/Umi-OCR/total?style=flat-square" alt="forks">
+  <a href="#download-releases">
+    <img src="https://img.shields.io/github/downloads/hiroi-sora/Umi-OCR/total?style=flat-square" alt="downloads">
   </a>
   <a href="https://star-history.com/#hiroi-sora/Umi-OCR">
     <img src="https://img.shields.io/github/stars/hiroi-sora/Umi-OCR?style=flat-square" alt="stars">
@@ -37,236 +26,176 @@
     <img src="https://img.shields.io/github/forks/hiroi-sora/Umi-OCR?style=flat-square" alt="forks">
   </a>
   <a href="https://hosted.weblate.org/engage/umi-ocr/">
-    <img src="https://hosted.weblate.org/widget/umi-ocr/svg-badge.svg" alt="翻译状态">
+    <img src="https://hosted.weblate.org/widget/umi-ocr/svg-badge.svg" alt="translation status">
   </a>
+  <img src="https://img.shields.io/badge/Platform-Windows%207%2B%20%7C%20Linux%20x64-2ea44f?style=flat-square" alt="platform">
+  <img src="https://img.shields.io/badge/OCR-Offline-1f6feb?style=flat-square" alt="offline OCR">
+  <img src="https://img.shields.io/badge/Interface-GUI%20%7C%20CLI%20%7C%20HTTP-f97316?style=flat-square" alt="interfaces">
 </p>
 
 <div align="center">
   <h3>
-    <a href="#目录">
-      使用说明
-    </a>
+    <a href="#table-of-contents">Usage</a>
     <span> • </span>
-    <a href="#下载发行版">
-      下载地址
-    </a>
+    <a href="#download-releases">Download Releases</a>
     <span> • </span>
-    <a href="CHANGE_LOG.md">
-      更新日志
-    </a>
+    <a href="CHANGE_LOG.md">Changelog</a>
     <span> • </span>
-    <a href="https://github.com/hiroi-sora/Umi-OCR/issues">
-      提交Bug
-    </a>
+    <a href="https://github.com/hiroi-sora/Umi-OCR/issues">Report Issues</a>
   </h3>
 </div>
-<br>
 
 <div align="center">
-  <strong>免费，开源，可批量的离线OCR软件</strong><br>
-  <sub>适用于 Windows7 x64 、Linux x64
-</div><br>
+  <strong>Free, open-source, batch offline OCR software</strong><br>
+  <sub>Compatible with Windows 7 x64 and Linux x64</sub>
+</div>
 
-- **免费**：本项目所有代码开源，完全免费。
-- **方便**：解压即用，离线运行，无需网络。
-- **高效**：自带高效率的离线OCR引擎，内置多种语言识别库。
-- **灵活**：支持命令行、HTTP接口等外部调用方式。
-- **功能**：截图OCR / 批量OCR / PDF识别 / 二维码 / 公式识别
+## Overview
 
-<p align="center"><img src="https://tupian.li/images/2023/11/19/65599097ab5f4.png" alt="1-标题-1.png" style="width: 80%;"></p>
+Umi-OCR is a desktop-first OCR tool focused on offline processing, high throughput batch workflows, and practical integrations.
 
-![1-标题-2.png](https://tupian.li/images/2023/11/19/6559909fdeeba.png)
+- **Free**: All code is open source and free to use.
+- **Convenient**: Extract and run locally, no network dependency for core OCR.
+- **Efficient**: Bundled offline OCR engines with multi-language support.
+- **Flexible**: Supports GUI workflows, command line control, and HTTP APIs.
+- **Feature-rich**: Screenshot OCR, batch OCR, document OCR, QR code read/create, formula recognition entry point.
 
-## 目录
+| ✅ Quick Facts | Details |
+| --- | --- |
+| 🧩 License | MIT |
+| 🌐 Network Requirement | No network needed for core OCR workflows |
+| 💻 Platform | Windows 7 x64+ / Linux x64 |
+| 🛠 Usage Modes | GUI, CLI, HTTP API |
+| 🌍 Translation | Weblate-based community localization |
 
-- [截图识别](#截图OCR)
-  - [排版解析](#文本后处理) - 识别不同排版，按正确顺序输出文字
-- [批量识别](#批量OCR)
-  - [忽略区域](#忽略区域) - 排除截图水印处的文字
-- [二维码](#二维码) 支持扫码或生成二维码图片
-- [文档识别](#文档识别) 从PDF扫描件中提取文本，或转为双层可搜索PDF
-- [全局设置](#全局设置)
-- [命令行调用](docs/README_CLI.md)
-- [HTTP接口](docs/http/README.md)
-- [构建项目（Windows、Linux）](#构建项目)
+<p align="center"><img src="https://tupian.li/images/2023/11/19/65599097ab5f4.png" alt="Umi-OCR preview 1" style="width: 80%;"></p>
 
-## 使用源码
+![Umi-OCR preview 2](https://tupian.li/images/2023/11/19/6559909fdeeba.png)
 
-开发者请务必阅读 [构建项目](#构建项目) 。
+## Table of Contents
 
-## 下载发行版
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Download Releases](#download-releases)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Examples](#examples)
+- [API References](#api-references)
+- [Development Notes](#development-notes)
+- [Troubleshooting](#troubleshooting)
+- [Localization](#localization)
+- [Roadmap](#roadmap)
+- [Contribution](#contribution)
+- [Support](#support)
+- [License](#license)
 
-以下发布链接均长期维护，提供稳定版本的下载。
+## Features
 
-- **蓝奏云** https://hiroi-sora.lanzoul.com/s/umi-ocr （国内推荐，免注册/无限速）
-- **GitHub** https://github.com/hiroi-sora/Umi-OCR/releases/latest
-- **Source Forge** https://sourceforge.net/projects/umi-ocr
+### Screenshot OCR
 
+<p align="center"><img src="https://tupian.li/images/2023/11/19/65599097aba8e.png" alt="Screenshot OCR" style="width: 80%;"></p>
 
-<details>
-<summary><b>•&nbsp;&nbsp;Scoop Installer</b>（点击展开）</summary>
+- Trigger OCR by screenshot shortcut after opening the Screenshot OCR tab.
+- Left panel supports text selection directly in image preview.
+- Right panel supports editable recognition history and multi-record copy.
+- Supports pasted images from clipboard.
+- Formula recognition reference: [Issue #254](https://github.com/hiroi-sora/Umi-OCR/issues/254)
 
-[Scoop](https://scoop.sh/) 是一款Windows下的命令行安装程序，可方便地管理多个应用。您可以先安装 Scoop ，再使用以下指令安装 `Umi-OCR` ：
+#### Text Post-Processing (Layout Parsing)
 
-- 添加 `extras` 桶：
-```
-scoop bucket add extras
-```
+<p align="center"><img src="https://tupian.li/images/2023/11/19/6559909f3e378.png" alt="Text post-processing" style="width: 80%;"></p>
 
-- （可选1）安装 Umi-OCR（自带 `Rapid-OCR` 引擎，兼容性好）：
-```
-scoop install extras/umi-ocr
-```
+Built-in schemes to reorder OCR blocks and improve readability:
 
-- （可选2）安装 Umi-OCR（自带 `Paddle-OCR` 引擎，速度稍快）：
-```
-scoop install extras/umi-ocr-paddle
-```
+- `Multi-column - natural paragraphs`
+- `Multi-column - always line break`
+- `Multi-column - no line break`
+- `Single-column - natural paragraphs`
+- `Single-column - always line break`
+- `Single-column - no line break`
+- `Single-column - preserve indentation` (useful for code snippets)
+- `No post-processing` (raw OCR output)
 
-- 不要同时安装二者，快捷方式可能会被覆盖。但您可以额外导入 [插件](https://github.com/hiroi-sora/Umi-OCR_plugins) ，随时切换不同OCR引擎。
+These schemes can handle horizontal and vertical (right-to-left) layout if the selected OCR engine model supports it.
 
-</details>
-</br>
+### Batch OCR
 
-## 开始使用
+<p align="center"><img src="https://tupian.li/images/2023/11/19/655990a2511e0.png" alt="Batch OCR" style="width: 80%;"></p>
 
-软件发布包下载为 `.7z` 压缩包或 `.7z.exe` 自解压包。自解压包可在没有安装压缩软件的电脑上，解压文件。
+- Input formats: `jpg, jpe, jpeg, jfif, png, webp, bmp, tif, tiff`
+- Output formats: `txt, jsonl, md, csv(Excel)`
+- Supports text post-processing rules from Screenshot OCR.
+- No practical task-count cap in UI workflow (hundreds of images per run are supported).
+- Supports auto shutdown/sleep after task completion.
+- For extra-large images, adjust `OCR settings -> image side limit`.
 
-本软件无需安装。解压后，点击 `Umi-OCR.exe` 即可启动程序。
+#### Ignore Regions
 
-遇到任何问题，请提 [Issue](https://github.com/hiroi-sora/Umi-OCR/issues) ，我会尽可能帮助你。
+<p align="center"><img src="https://tupian.li/images/2023/11/19/6559911d28be7.png" alt="Ignore region editor" style="width: 80%;"></p>
 
-## 界面语言
+- Exclude stable watermark/logo text during batch OCR.
+- Draw multiple rectangles with right mouse button in the Ignore Region editor.
+- Draw rectangles larger than the target watermark area for better robustness.
+- The ignore behavior is block-based (text block inside region is ignored).
 
-Umi-OCR 支持的界面多国语言。在第一次打开软件时，将会按照你的电脑的系统设置，自动切换语言。
+<p align="center"><img src="https://tupian.li/images/2024/05/30/66587bf03ae15.png" alt="Ignore region scope example" style="width: 80%;"></p>
 
-如果需要手动切换语言，请参考下图，`全局设置`→`语言/Language` 。
+### Document OCR
 
-<p align="center"><img src="https://tupian.li/images/2023/11/19/65599c3f9e600.png" alt="1-标题-1.png" style="width: 80%;"></p>
+<p align="center"><img src="https://github.com/hiroi-sora/Umi-OCR/assets/56373419/fc2266ee-b9b7-4079-8b10-6610e6da6cf5" alt="Document OCR" style="width: 80%;"></p>
 
-## 标签页
+- Input formats: `pdf, xps, epub, mobi, fb2, cbz`
+- Extract embedded text when available or OCR scanned pages.
+- Export searchable layered PDFs.
+- Supports ignore regions (for headers/footers).
+- Supports auto shutdown/sleep after task completion.
 
-Umi-OCR v2 由一系列灵活好用的**标签页**组成。您可按照自己的喜好，打开需要的标签页。
+### QR Code
 
-标签栏左上角可以切换**窗口置顶**。右上角能够**锁定标签页**，以防止日常使用中误触关闭标签页。
+<p align="center"><img src="https://tupian.li/images/2023/11/19/655991268d6b1.png" alt="QR code" style="width: 80%;"></p>
 
-### 截图OCR
+Read mode:
 
-<p align="center"><img src="https://tupian.li/images/2023/11/19/65599097aba8e.png" alt="2-截图-1.png" style="width: 80%;"></p>
-
-**截图OCR**：打开这一页后，就可以用快捷键唤起截图，识别图中的文字。
-- 左侧的图片预览栏，可直接用鼠标划选复制。
-- 右侧的识别记录栏，可以编辑文字，允许划选多个记录复制。
-- 也支持在别处复制图片，粘贴到Umi-OCR进行识别。
-- 关于 [公式识别](https://github.com/hiroi-sora/Umi-OCR/issues/254) 功能
-
-#### 文本后处理
-
-<p align="center"><img src="https://tupian.li/images/2023/11/19/6559909f3e378.png" alt="2-截图-2.png" style="width: 80%;"></p>
-
-关于 **OCR文本后处理 - 排版解析方案**： 可以整理OCR结果的排版和顺序，使文本更适合阅读和使用。预设方案：
-- `多栏-按自然段换行`：适合大部分情景，自动识别多栏布局，按自然段规则进行换行。
-- `多栏-总是换行`：每段语句都进行换行。
-- `多栏-无换行`：强制将所有语句合并到同一行。
-- `单栏-按自然段换行`/`总是换行`/`无换行`：与上述类似，不过 不区分多栏布局。
-- `单栏-保留缩进`：适用于解析代码截图，保留行首缩进和行中空格。
-- `不做处理`：OCR引擎的原始输出，默认每段语句都进行换行。
-
-上述方案，均能自动处理横排和竖排（从右到左）的排版。（竖排文字还需要OCR引擎本身支持）
-
----
-
-### 批量OCR
-
-<p align="center"><img src="https://tupian.li/images/2023/11/19/655990a2511e0.png" alt="3-批量-1.png" style="width: 80%;"></p>
-
-**批量OCR**：这一页用于批量导入本地图片进行识别。
-- 支持格式：`jpg, jpe, jpeg, jfif, png, webp, bmp, tif, tiff`。
-- 保存识别结果的支持格式：`txt, jsonl, md, csv(Excel)`。
-- 与截图OCR一样，支持`文本后处理`功能，整理OCR文本的排版和顺序。
-- 没有数量上限，可一次性导入几百张图片进行任务。
-- 支持任务完成后自动关机/待机。
-- 如果要识别像素超大的长图或大图，请调整：**页面的设置→文字识别→限制图像边长→【调高数值】**。
-- 拥有特殊功能 `忽略区域` 。
-
-#### 忽略区域
-
-<p align="center"><img src="https://tupian.li/images/2023/11/19/6559911d28be7.png" alt="3-批量-2.png" style="width: 80%;"></p>
-
-关于 **OCR文本后处理 - 忽略区域**： 批量OCR中的一种特殊功能，适用于排除图片中的不想要的文字。
-- 在批量识别页的右栏设置中可进入忽略区域编辑器。
-- 如上方样例，图片顶部和右下角存在多个水印 / LOGO。如果批量识别这类图片，水印会对识别结果造成干扰。
-- 按住右键，绘制多个矩形框。这些区域内的文字将在任务中被忽略。
-- 请尽量将矩形框画得大一些，完全包裹住水印所有可能出现的位置。
-- 注意，只有处于忽略区域框内部的整个文本块（而不是单个字符）会被忽略。如下图所示，黄色边框的深色矩形是一个忽略区域。那么只有`key_mouse`才会被忽略。`pubsub_connector.py`、`pubsub_service.py` 这两个文本块得以保留。
-<p align="center"><img src="https://tupian.li/images/2024/05/30/66587bf03ae15.png" alt="忽略区域范围示例.png" style="width: 80%;"></p>
-
----
-
-### 文档识别
-
-<p align="center"><img src="https://github.com/hiroi-sora/Umi-OCR/assets/56373419/fc2266ee-b9b7-4079-8b10-6610e6da6cf5" alt="" style="width: 80%;"></p>
-
-**文档识别**：
-- 支持格式：`pdf, xps, epub, mobi, fb2, cbz`。
-- 对扫描件进行OCR，或提取原有文本。可输出为 **双层可搜索PDF** 。
-- 支持设定 **忽略区域** ，可用于排除页眉页脚的文字。
-- 可设置任务完成后 **自动关机/休眠** 。
-
----
-
-### 二维码
-
-<p align="center"><img src="https://tupian.li/images/2023/11/19/655991268d6b1.png" alt="4-二维码-1.png" style="width: 80%;"></p>
-
-**扫码**：
-- 截图/粘贴/拖入本地图片，读取其中的二维码、条形码。
-- 支持一图多码。
-- 支持19种协议，如下：
+- Screenshot, paste, or drag local images for decoding.
+- Supports multiple codes in one image.
+- Supports 19 formats:
 
 `Aztec`,`Codabar`,`Code128`,`Code39`,`Code93`,`DataBar`,`DataBarExpanded`,`DataMatrix`,`EAN13`,`EAN8`,`ITF`,`LinearCodes`,`MatrixCodes`,`MaxiCode`,`MicroQRCode`,`PDF417`,`QRCode`,`UPCA`,`UPCE`
 
-<p align="center"><img src="https://tupian.li/images/2023/11/19/6559911cda737.png" alt="4-二维码-2.png" style="width: 80%;"></p>
+<p align="center"><img src="https://tupian.li/images/2023/11/19/6559911cda737.png" alt="QR code generate" style="width: 80%;"></p>
 
-**生成码**：
-- 输入文本，生成二维码图片。
-- 支持19种协议和**纠错等级**等参数。
+Generate mode:
 
----
+- Generate QR/barcode images from text.
+- Supports format selection and error-correction settings.
 
-### 全局设置
+### Global Settings
 
-<p align="center"><img src="https://tupian.li/images/2023/11/19/655991252e780.png" alt="5-全局设置-1.png" style="width: 80%;"></p>
+<p align="center"><img src="https://tupian.li/images/2023/11/19/655991252e780.png" alt="Global settings" style="width: 80%;"></p>
 
-**全局设置**：在这里可以调整软件的全局参数。常用功能如下：
-- 一键添加快捷方式或设置开机自启。
-- 更改界面**语言**。Umi支持繁中、英语、日语等语言。
-- 切换界面**主题**。Umi拥有多个亮/暗主题。
-- 调整界面**文字的大小**和**字体**。
-- 切换OCR插件。
-- **渲染器**：软件界面默认支持显卡加速渲染。如果在你的机器上出现截屏闪烁、UI错位的情况，请调整`界面和外观` → `渲染器` ，尝试切换到不同渲染方案，或关闭硬件加速。
+- Add shortcuts and configure startup behavior.
+- Switch UI language.
+- Switch themes (light/dark variants).
+- Configure font and UI scaling.
+- Switch OCR plugins.
+- Change renderer (`Interface and Appearance -> Renderer`) when GPU acceleration causes flicker or UI offset.
 
-## 调用接口：
+## Project Structure
 
-- [命令行手册](docs/README_CLI.md)
-- [HTTP接口手册](docs/http/README.md)
+### Repository Relations
 
----
+- [Main repository](https://github.com/hiroi-sora/Umi-OCR)
+- [Plugin repository](https://github.com/hiroi-sora/Umi-OCR_plugins)
+- [Windows runtime repository](https://github.com/hiroi-sora/Umi-OCR_runtime_windows)
+- [Linux runtime repository](https://github.com/hiroi-sora/Umi-OCR_runtime_linux)
 
-## 关于项目结构
+### Runtime Layout (Canonical Upstream Layout)
 
-### 各仓库：
+`**` means content included in this main repository.
 
-- [主仓库](https://github.com/hiroi-sora/Umi-OCR) 👈
-- [插件库](https://github.com/hiroi-sora/Umi-OCR_plugins)
-- [Windows 运行库](https://github.com/hiroi-sora/Umi-OCR_runtime_windows)
-- [Linux 运行库](https://github.com/hiroi-sora/Umi-OCR_runtime_linux)
-
-### 工程结构：
-
-`**` 后缀表示本仓库(`主仓库`)包含的内容。
-
-```
+```text
 Umi-OCR
 ├─ Umi-OCR.exe
 ├─ umi-ocr.sh
@@ -274,136 +203,417 @@ Umi-OCR
    ├─ main.py **
    ├─ version.py **
    ├─ qt_res **
-   │  └─ 项目qt资源，包括图标和qml源码
+   │  └─ Qt resources, including icons and QML source
    ├─ py_src **
-   │  └─ 项目python源码
+   │  └─ Python source
    ├─ plugins
-   │  └─ 插件
+   │  └─ OCR plugins
    └─ i18n **
-      └─ 翻译文件
+      └─ translation files
 ```
 
-支持的离线OCR引擎：
+### Source Tree in This Repository Snapshot
 
-- [PaddleOCR-json](https://github.com/hiroi-sora/PaddleOCR-json)
-- [RapidOCR-json](https://github.com/hiroi-sora/RapidOCR-json)
+```text
+.
+├── README.md
+├── README_en.md
+├── README_ja.md
+├── CHANGE_LOG.md
+├── LICENSE
+├── docs/
+│   ├── README_CLI.md
+│   └── http/
+├── UmiOCR-data/
+│   ├── main.py
+│   ├── py_src/
+│   │   ├── run.py
+│   │   ├── server/
+│   │   ├── mission/
+│   │   ├── ocr/
+│   │   ├── tag_pages/
+│   │   ├── plugins_controller/
+│   │   ├── image_controller/
+│   │   └── utils/
+│   ├── qt_res/
+│   │   ├── qml/
+│   │   └── images/
+│   └── i18n/
+├── dev-tools/
+│   └── i18n/
+└── i18n/
+```
 
-运行环境框架：
+## Prerequisites
 
-- [PyStand](https://github.com/skywind3000/PyStand) 定制版
+### End Users
 
-## 构建项目
+| Item | Requirement |
+| --- | --- |
+| Operating System | Windows 7 x64+ or Linux x64 |
+| CPU (Recommended) | x64 CPU with AVX support (for PaddleOCR-based plugins) |
+| Runtime (Windows Recommended) | Visual C++ runtime for compatibility |
 
-请跳转下述仓库，完成对应平台的开发/运行环境部署。
+### Developers
 
-- [Windows](https://github.com/hiroi-sora/Umi-OCR_runtime_windows)
-- [Linux](https://github.com/hiroi-sora/Umi-OCR_runtime_linux)
+- Read and follow platform runtime setup from:
+  - [Umi-OCR_runtime_windows](https://github.com/hiroi-sora/Umi-OCR_runtime_windows)
+  - [Umi-OCR_runtime_linux](https://github.com/hiroi-sora/Umi-OCR_runtime_linux)
+- This repository does not provide a standalone `requirements.txt` or `pyproject.toml` for direct pip-based setup.
 
---- 
+## Installation
 
-## 软件本地化翻译：
+### Option A: Portable Release Package (Recommended)
 
-本项目使用 Weblate 平台进行UI界面的本地化翻译协作。我们欢迎任何译者参与翻译工作，您可进入此链接 [Weblate: Umi-OCR](https://hosted.weblate.org/engage/umi-ocr/) ，在线校对、补充现有语言，或添加新语言。
+1. Download `.7z` or self-extracting `.7z.exe` package.
+2. Extract files.
+3. Launch `Umi-OCR.exe`.
 
-感谢以下译者，为 Umi-OCR 贡献了本地化翻译工作：
+### Option B: Scoop (Windows)
 
-| 译者                                                                                 | 贡献语言                  |
-| ------------------------------------------------------------------------------------ | ------------------------- |
-| [bob](https://hosted.weblate.org/user/q021)                                          | English, 繁體中文, 日本語 |
-| [Qingzheng Gao](https://github.com/QZGao)                                            | English, 繁體中文         |
-| [Weng, Chia-Ling](https://hosted.weblate.org/user/ChiaLingWeng)                      | English, 繁體中文         |
-| [linzow](https://hosted.weblate.org/user/linzow)                                     | English, 繁體中文         |
-| [Marcos i](https://hosted.weblate.org/user/ultramarkorj9)                            | English, Português        |
-| [Eric Guo](https://hosted.weblate.org/user/qwedc001)                                 | English                   |
-| [steven0081](https://hosted.weblate.org/user/steven0081)                             | English                   |
-| [Brandon Cagle](https://hosted.weblate.org/user/random4t4x14)                        | English                   |
-| [plum7x](https://hosted.weblate.org/user/plum7x)                                     | 繁體中文                  |
-| [hugoalh](https://hosted.weblate.org/user/hugoalh)                                   | 繁體中文                  |
-| [Anarkiisto](https://hosted.weblate.org/user/Anarkiisto)                             | 繁體中文                  |
-| [ドコモ光](https://hosted.weblate.org/user/umren190402)                              | 日本語                    |
-| [杨鹏](https://hosted.weblate.org/user/ypf)                                          | Português                 |
-| [Вячеслав Анатольевич Малышев](https://hosted.weblate.org/user/1969)                 | Русский                   |
-| [Muhammadyusuf Kurbonov](https://hosted.weblate.org/user/muhammadyusuf.kurbonov2002) | Русский                   |
-| [தமிழ்நேரம்](https://hosted.weblate.org/user/TamilNeram/)                                | தமிழ்                       |
+```bash
+scoop bucket add extras
+```
 
-如果有信息错误或人员缺漏，请在 [这个讨论](https://github.com/hiroi-sora/Umi-OCR/discussions/449) 中回复。
+RapidOCR variant (better compatibility):
 
----
+```bash
+scoop install extras/umi-ocr
+```
 
-## 赞助
+PaddleOCR variant (slightly faster):
 
-Umi-OCR 项目主要由作者 [hiroi-sora](https://github.com/hiroi-sora) 用业余时间在开发和维护。如果您喜欢这款软件，欢迎赞助。
+```bash
+scoop install extras/umi-ocr-paddle
+```
 
-- 国内用户可通过 [爱发电](https://afdian.com/a/hiroi-sora) 赞助作者。
+Do not install both variants simultaneously (shortcut conflicts may occur). Use plugin switching if needed.
+
+### Option C: Build/Run via Runtime Repositories
+
+Follow build/runtime bootstrap instructions from:
+
+- [Windows runtime setup](https://github.com/hiroi-sora/Umi-OCR_runtime_windows)
+- [Linux runtime setup](https://github.com/hiroi-sora/Umi-OCR_runtime_linux)
+
+## Download Releases
+
+| Mirror | Link | Notes |
+| --- | --- | --- |
+| Lanzou | https://hiroi-sora.lanzoul.com/s/umi-ocr | Regional mirror |
+| GitHub | https://github.com/hiroi-sora/Umi-OCR/releases/latest | Primary upstream release page |
+| SourceForge | https://sourceforge.net/projects/umi-ocr | Alternative download mirror |
+
+## Usage
+
+### Getting Started
+
+- Umi-OCR is portable; no installer is required.
+- Launch `Umi-OCR.exe` after extraction.
+- If startup fails, see [Troubleshooting](#troubleshooting).
+
+### Interface Language
+
+On first launch, UI language is auto-selected by system locale.
+
+For manual switching: `Global Settings -> Language`.
+
+<p align="center"><img src="https://tupian.li/images/2023/11/19/65599c3f9e600.png" alt="Language switch" style="width: 80%;"></p>
+
+### Tabs and Workflow
+
+- Open only required tabs for your workflow.
+- Toggle always-on-top from the top-left corner of tab bar.
+- Lock tabs from top-right to prevent accidental close.
+
+### Command-Line Usage
+
+CLI manual: [docs/README_CLI.md](docs/README_CLI.md)
+
+Basic controls:
+
+```bash
+umi-ocr --help
+umi-ocr --show
+umi-ocr --hide
+umi-ocr --quit
+umi-ocr --reload
+```
+
+OCR commands:
+
+```bash
+umi-ocr --screenshot
+umi-ocr --clipboard
+umi-ocr --path "D:/img1.png" "D:/img2.png" "D:/image/test"
+```
+
+Screenshot with fixed region:
+
+```bash
+umi-ocr --screenshot screen=1 rect=50,100,300,200
+```
+
+QR commands:
+
+```bash
+umi-ocr --qrcode_read "D:/qr.png"
+umi-ocr --qrcode_create "hello world" "D:/out.jpeg" 256 256
+```
+
+Output options:
+
+```bash
+umi-ocr --screenshot --clip
+umi-ocr --screenshot --output result.txt
+umi-ocr --screenshot "-->" result.txt
+umi-ocr --screenshot --output_append result.txt
+umi-ocr --screenshot "-->>" result.txt
+```
+
+### HTTP API Usage
+
+HTTP docs: [docs/http/README.md](docs/http/README.md)
+
+Key endpoints:
+
+| Endpoint | Purpose |
+| --- | --- |
+| `/api/ocr/get_options` | OCR options |
+| `/api/ocr` | Execute OCR |
+| `/api/doc/*` | Document options/upload/result/download |
+| `/api/qrcode` | QR decode |
+| `/argv` | CLI bridge over HTTP |
+
+Note: In `Global Settings`, HTTP service must remain enabled (default). Use local-only host unless LAN access is required.
+
+## Configuration
+
+- Runtime settings are stored in `UmiOCR-data/.settings` (INI format).
+- After editing config manually, apply changes with:
+
+```bash
+umi-ocr --reload
+```
+
+- Some startup/runtime compatibility state may also involve:
+  - `UmiOCR-data/.pre_settings`
+  - `UmiOCR-data/logs/` (for versions with runtime logging)
+
+## Examples
+
+### Example 1: Batch OCR by Path
+
+```bash
+umi-ocr --path "D:/book_pages" --output "D:/ocr_output.txt"
+```
+
+### Example 2: Read QR from Multiple Paths
+
+```bash
+umi-ocr --qrcode_read "D:/qr/1.png" "D:/qr/2.png"
+```
+
+### Example 3: Generate QR with Explicit Size
+
+```bash
+umi-ocr --qrcode_create "https://github.com/hiroi-sora/Umi-OCR" "D:/qr_out.jpeg" 128 256
+```
+
+### Example 4: Advanced Module Invocation
+
+```bash
+umi-ocr --all_modules
+umi-ocr --call_qml QRCode --func scanPaths '["D:/Pictures/Screenshots/test/二维码/1111.png","D:/Pictures/Screenshots/test/二维码/2222.png"]'
+```
+
+## API References
+
+- Command line manual: [docs/README_CLI.md](docs/README_CLI.md)
+- HTTP API manual: [docs/http/README.md](docs/http/README.md)
+- OCR API: [docs/http/api_ocr.md](docs/http/api_ocr.md)
+- Document API: [docs/http/api_doc.md](docs/http/api_doc.md)
+- QR API: [docs/http/api_qrcode.md](docs/http/api_qrcode.md)
+- HTTP argv bridge: [docs/http/argv.md](docs/http/argv.md)
+
+## Development Notes
+
+- Entry points:
+  - `UmiOCR-data/main.py` (runtime bootstrap)
+  - `UmiOCR-data/py_src/run.py` (application startup)
+- UI stack: PySide2 + QML (`UmiOCR-data/qt_res/qml`).
+- Core services:
+  - `py_src/server/*` for HTTP + command transport
+  - `py_src/mission/*` for queued OCR/Doc/QR tasks
+  - `py_src/ocr/*` for OCR post-processing and outputs
+- OCR engines supported by ecosystem:
+  - [PaddleOCR-json](https://github.com/hiroi-sora/PaddleOCR-json)
+  - [RapidOCR-json](https://github.com/hiroi-sora/RapidOCR-json)
+- Runtime framework: [PyStand (customized)](https://github.com/skywind3000/PyStand)
+
+## Troubleshooting
+
+For full troubleshooting details: https://github.com/hiroi-sora/Umi-OCR/issues/447
+
+Quick index:
+
+| Symptom | Jump |
+| --- | --- |
+| Cannot find `Py_Main()` | [`Cannot find Py_Main()`](#cannot-find-py_main) |
+| OpenGL context creation failed | [`Failed to create OpenGL context`](#failed-to-create-opengl-context) |
+| App crashes on start | [`Umi-OCR.exe has stopped working`](#umi-ocrexe-has-stopped-working) |
+| `0xc0000142` / OCR init failure | [`0xc0000142` or OCR init failure with MKLDNN/AVX hints](#0xc0000142-or-ocr-init-failure-with-mkldnnavx-hints) |
+| Missing `api-ms-win-crt-runtime-l1-1-0.dll` | [`Missing api-ms-win-crt-runtime-l1-1-0dll`](#missing-api-ms-win-crt-runtime-l1-1-0dll) |
+
+### `Cannot find Py_Main()`
+
+- Install VC runtime: https://aka.ms/vs/17/release/vc_redist.x64.exe
+- Or launch with fallback `UmiOCR-data/RUN_GUI.bat`.
+- Note: `.bat` launcher has limitations (no CLI control, limited shortcut automation).
+
+### `Failed to create OpenGL context`
+
+- Download runtime patch: https://github.com/hiroi-sora/Umi-OCR_v2/files/13167436/opengl32sw_64.zip
+- Put extracted DLL into `UmiOCR-data/site-packages/PySide2/`.
+
+### `Umi-OCR.exe has stopped working`
+
+- Common after reusing config across different Windows versions.
+- Remove `UmiOCR-data/.pre_settings` and retry.
+
+### `0xc0000142` or OCR init failure with MKLDNN/AVX hints
+
+- Likely CPU lacks AVX.
+- Use RapidOCR variant or switch away from PaddleOCR plugin:
+  - [Umi-OCR_Rapid releases](https://github.com/hiroi-sora/Umi-OCR/releases)
+  - [Umi-OCR plugins](https://github.com/hiroi-sora/Umi-OCR_plugins/releases)
+
+### Black console with `OSError` (program not found)
+
+- Common on unpatched early Windows 7 (especially missing `KB2533623`).
+- Recommended fix: run full Windows Update and reboot.
+
+### Crash while exporting searchable PDF
+
+- Often caused by missing Windows 7 updates (especially `KB4534310` and dependencies).
+- Recommended fix: install all missing system updates via Windows Update.
+
+### Missing `api-ms-win-crt-runtime-l1-1-0.dll`
+
+- Install VC runtime: https://aka.ms/vs/17/release/vc_redist.x64.exe
+
+### Manual Shortcut Placement
+
+If auto shortcut creation fails, place shortcuts manually:
+
+- Start menu: `C:\ProgramData\Microsoft\Windows\Start Menu`
+- Startup: `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup`
+
+## Localization
+
+This project uses Weblate for collaborative localization:
+
+- [Weblate: Umi-OCR](https://hosted.weblate.org/engage/umi-ocr/)
+
+README language files in this repository:
+
+| Language | File |
+| --- | --- |
+
+Thanks to all translators:
+
+| Translator | Contributed Languages |
+| --- | --- |
+| [杨鹏](https://hosted.weblate.org/user/ypf) | Português |
+| [தமிழ்நேரம்](https://hosted.weblate.org/user/TamilNeram/) | தமிழ் |
+
+If there are mistakes or omissions, please reply in [this discussion](https://github.com/hiroi-sora/Umi-OCR/discussions/449).
+
+## Roadmap
+
+### Completed
+
+- Tab-page architecture.
+- OCR API controller.
+- OCR mission/task controller.
+- Theme manager with light/dark support.
+- Batch OCR.
+- Screenshot OCR.
+- Hotkey mechanism.
+- System tray menu.
+- Text block post-processing (layout optimization).
+- Engine memory cleanup.
+- Multi-language UI.
+- Command-line mode.
+- Windows 7 compatibility.
+- Excel (CSV) output format.
+- `Esc` interrupt for screenshot.
+- External theme files.
+- Font switching.
+- Loading animation.
+- Ignore regions.
+- QR code recognition.
+- Image preview in batch recognition.
+- PDF recognition.
+- Open image with local image viewer. [#335](https://github.com/hiroi-sora/Umi-OCR/issues/335)
+- Repeat previous screenshot region. [#357](https://github.com/hiroi-sora/Umi-OCR/issues/357)
+- Fixed Windows 7 compatibility issue in document recognition.
+- QR read/create support in HTTP and CLI interfaces. (#423)
+- QR interface documentation.
+- Linux platform migration.
+- HTTP document-recognition API.
+
+### Long-Term Plans
+
+The following items are planned ideas and may evolve during development:
+
+- [ ] Refactor underlying plugin mechanism.
+- [ ] Online OCR API plugin.
+- [ ] Independent formula-recognition plugin.
+- [ ] Dedicated formula tab with LaTeX rendering.
+- [ ] Update-check mechanism.
+- [ ] Additional post-processing modules beyond layout parsing.
+- [ ] Event triggers for key interface functions.
+- [ ] GPU-based offline OCR.
+- [ ] Image translation.
+- [ ] Offline translation.
+- [ ] Fixed-region OCR.
+- [ ] Table recognition to Excel output.
+- [ ] History system.
+- [ ] Compatibility expansion for platforms such as macOS/Ubuntu.
+
+## Contribution
+
+Contributions are welcome.
+
+- Report bugs or request features via [Issues](https://github.com/hiroi-sora/Umi-OCR/issues).
+- Discuss ideas in [Discussions](https://github.com/hiroi-sora/Umi-OCR/discussions).
+- Contribute translations via [Weblate](https://hosted.weblate.org/engage/umi-ocr/).
+- For engine/plugin work, also see [Umi-OCR_plugins](https://github.com/hiroi-sora/Umi-OCR_plugins).
+
+For development setup, follow platform runtime repositories:
+
+- [Umi-OCR_runtime_windows](https://github.com/hiroi-sora/Umi-OCR_runtime_windows)
+- [Umi-OCR_runtime_linux](https://github.com/hiroi-sora/Umi-OCR_runtime_linux)
+
+## Support
+
+Umi-OCR is mainly developed and maintained in spare time by [hiroi-sora](https://github.com/hiroi-sora).
+
+If this project helps you, sponsoring is appreciated:
+
+- Afdian (CN): https://afdian.com/a/hiroi-sora
 
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=hiroi-sora/Umi-OCR&type=Date)](https://star-history.com/#hiroi-sora/Umi-OCR&Date)
 
-## [更新日志](CHANGE_LOG.md)
+## CHANGE LOG
 
-## 开发计划
+- [CHANGE_LOG.md](CHANGE_LOG.md)
 
-<details>
-<summary>已完成的工作</summary>
+## License
 
-- 标签页框架。
-- OCR API控制器。
-- OCR 任务控制器。
-- 主题管理器，支持切换浅色/深色主题主题。
-- 实现 **批量OCR**。
-- 实现 **截图OCR**。
-- 快捷键机制。
-- 系统托盘菜单。
-- 文本块后处理（排版优化）。
-- 引擎内存清理。
-- 软件界面多国语言。
-- 命令行模式。
-- Win7兼容。
-- Excel（csv）输出格式。
-- `Esc`中断截图操作
-- 外置主题文件
-- 字体切换
-- 加载动画
-- 忽略区域。
-- 二维码识别。
-- 批量识别页面的图片预览窗口。
-- PDF识别。
-- 调用本地图片浏览器打开图片。 [#335](https://github.com/hiroi-sora/Umi-OCR/issues/335)
-- 重复上一次截图。 [#357](https://github.com/hiroi-sora/Umi-OCR/issues/357)
-- 修Bug：文档识别在Windows7系统的兼容性问题。
-- HTTP/命令行接口添加二维码识别/生成功能。 (#423)
-- 二维码接口的文档。
-- Linux 平台移植。
-- HTTP 文档识别接口。
+This project is licensed under the MIT License.
 
-</details>
-
-<!-- ##### 正在进行的工作 -->
-
-##### 远期计划
-
-<details>
-<summary>展开</summary>
-
-这些是预想中的功能，在开发初期已预留好接口，将在远期慢慢实现。
-
-但开发途中受限于实际情况，可能更改功能设计、新增及取消功能。
-
-- [ ] 重构底层插件机制。
-- [ ] 在线 OCR API 插件。
-- [ ] 独立的数学公式识别插件。
-- [ ] “数学公式”标签页，提供独立的数学公式识别/Latex渲染。
-- [ ] 检查更新机制。
-- [ ] 排版解析之外的文本后处理模块（如保留数字、半全角字符转换、文本纠错）。
-- [ ] 关键接口函数添加事件触发方式。
-
-- 基于GPU的离线OCR。
-- 图片翻译
-- 离线翻译。
-- 固定区域识别。
-- 识别表格图片，输出为Excel。
-- 历史记录系统。
-- 兼容 MacOS / Ubuntu 等平台。
-
-</details>
+- [LICENSE](LICENSE)
